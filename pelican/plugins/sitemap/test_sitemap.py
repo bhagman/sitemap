@@ -154,7 +154,7 @@ http://localhost/translated-post.html
             contents = fd.read()
 
         # Verify translation link for English uses custom ARTICLE_URL
-        self.assertIn('ref="http://localhost/blog/translated-post/"', contents)
+        self.assertIn('href="http://localhost/blog/translated-post/"', contents)
         # Verify the French translation is also in sitemap
         # (French uses ARTICLE_LANG_URL which defaults differently)
         self.assertIn("translated-post-fr", contents)

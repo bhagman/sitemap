@@ -28,7 +28,7 @@ XML_URL = """
 {translations}</url>
 """
 
-XML_TRANSLATION = """<xhtml:link rel="alternate" hreflang="{}" ref="{}/{}"/>
+XML_TRANSLATION = """<xhtml:link rel="alternate" hreflang="{}" href="{}/{}"/>
 """
 
 XML_FOOTER = """
@@ -42,7 +42,7 @@ def format_date(date):
         tz = date.strftime("%z")
         tz = tz[:-2] + ":" + tz[-2:]
     else:
-        tz = "-00:00"
+        tz = "+00:00"
     return date.strftime("%Y-%m-%dT%H:%M:%S") + tz
 
 
